@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rotation_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="parent view">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bko-Lx-PST" userLabel="blue background">
+                                <rect key="frame" x="50" y="50" width="500" height="520"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gj1-we-VeY" userLabel="north view">
+                                        <rect key="frame" x="238" y="20" width="25" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-aT-J8k">
+                                                <rect key="frame" x="6" y="2" width="13" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="8dx-aT-J8k" firstAttribute="centerX" secondItem="Gj1-we-VeY" secondAttribute="centerX" id="K77-sA-u6Z"/>
+                                            <constraint firstItem="8dx-aT-J8k" firstAttribute="centerY" secondItem="Gj1-we-VeY" secondAttribute="centerY" id="R3Y-Gg-4ps"/>
+                                            <constraint firstAttribute="width" constant="25" id="ViL-Mc-sXA"/>
+                                            <constraint firstAttribute="height" constant="25" id="ad0-3B-LwH"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-OX-Mzl">
+                                        <rect key="frame" x="278" y="248" width="25" height="25"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="ld8-K8-mLi"/>
+                                            <constraint firstAttribute="width" constant="25" id="qRJ-xg-4MO"/>
+                                        </constraints>
+                                        <state key="normal" title="↻">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxD-bp-Q1B">
+                                        <rect key="frame" x="198" y="248" width="25" height="25"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="DyU-SJ-L33"/>
+                                            <constraint firstAttribute="height" constant="25" id="VsU-QR-8as"/>
+                                        </constraints>
+                                        <state key="normal" title="↺">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp3-m3-xly">
+                                        <rect key="frame" x="238" y="60" width="25" height="25"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="awh-za-qPc"/>
+                                            <constraint firstAttribute="width" constant="25" id="nZG-ck-gLZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uxD-bp-Q1B" firstAttribute="centerY" secondItem="bko-Lx-PST" secondAttribute="centerY" id="7Lt-KP-Nra"/>
+                                    <constraint firstItem="Z6c-OX-Mzl" firstAttribute="centerX" secondItem="bko-Lx-PST" secondAttribute="centerX" constant="40" id="A9P-Ay-U6Y"/>
+                                    <constraint firstItem="Sp3-m3-xly" firstAttribute="top" secondItem="bko-Lx-PST" secondAttribute="top" constant="60" id="FHr-MS-QTU"/>
+                                    <constraint firstItem="Gj1-we-VeY" firstAttribute="top" secondItem="bko-Lx-PST" secondAttribute="top" constant="20" placeholder="YES" id="GAi-YO-Mw4"/>
+                                    <constraint firstItem="Z6c-OX-Mzl" firstAttribute="centerY" secondItem="bko-Lx-PST" secondAttribute="centerY" id="Ls4-qs-ulN"/>
+                                    <constraint firstItem="Gj1-we-VeY" firstAttribute="centerX" secondItem="bko-Lx-PST" secondAttribute="centerX" placeholder="YES" id="gU5-yL-xnL"/>
+                                    <constraint firstItem="uxD-bp-Q1B" firstAttribute="centerX" secondItem="bko-Lx-PST" secondAttribute="centerX" constant="-40" id="hda-5H-17e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bko-Lx-PST" secondAttribute="bottom" constant="30" id="65T-Jn-ULV"/>
+                            <constraint firstItem="bko-Lx-PST" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Eyb-wx-011"/>
+                            <constraint firstItem="bko-Lx-PST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="eF8-16-BYM"/>
+                            <constraint firstItem="Sp3-m3-xly" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hKT-f5-Y3V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bko-Lx-PST" secondAttribute="trailing" constant="30" id="zIX-45-hit"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueBackground" destination="bko-Lx-PST" id="WIo-da-HAw"/>
+                        <outlet property="northView" destination="Gj1-we-VeY" id="0qO-1X-2nP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
