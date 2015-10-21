@@ -12,35 +12,42 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var northView: UIView!
     @IBOutlet weak var blueBackground: UIView!
+    @IBOutlet weak var northLayoutToMargin: NSLayoutConstraint!
+    @IBOutlet weak var northLayoutCenter: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        //northView.translatesAutoresizingMaskIntoConstraints = false
+        //blueBackground.translatesAutoresizingMaskIntoConstraints = false
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        northView.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    
     override func updateViewConstraints() {
-        //northView.removeConstraints(northView.constraints)
-        //northView.bounds.size = CGSizeMake(25, 25)
-        //northView.frame.size = CGSizeMake(25, 25)
+
+        self.view.removeConstraints([northLayoutToMargin, northLayoutCenter])
         
         switch UIDevice.currentDevice().orientation {
         case .LandscapeLeft:
-            northView.rightAnchor.constraintEqualToAnchor(blueBackground.rightAnchor, constant: 20)
-            northView.centerYAnchor.constraintEqualToAnchor(blueBackground.centerYAnchor)
+            northLayoutToMargin = northView.trailingAnchor.constraintEqualToAnchor(blueBackground.trailingAnchor, constant: 20)
+            northLayoutCenter = northView.centerYAnchor.constraintEqualToAnchor(blueBackground.centerYAnchor)
         case .LandscapeRight:
-            northView.leftAnchor.constraintEqualToAnchor(blueBackground.leftAnchor, constant: 20)
-            northView.centerYAnchor.constraintEqualToAnchor(blueBackground.centerYAnchor)
+            northLayoutToMargin = northView.leadingAnchor.constraintEqualToAnchor(blueBackground.leadingAnchor, constant: 20)
+            northLayoutCenter = northView.centerYAnchor.constraintEqualToAnchor(blueBackground.centerYAnchor)
         case .PortraitUpsideDown:
-            northView.bottomAnchor.constraintEqualToAnchor(blueBackground.bottomAnchor, constant: 20)
-            northView.centerXAnchor.constraintEqualToAnchor(blueBackground.centerXAnchor)
+            northLayoutToMargin = northView.bottomAnchor.constraintEqualToAnchor(blueBackground.bottomAnchor, constant: 20)
+            northLayoutCenter = northView.centerXAnchor.constraintEqualToAnchor(blueBackground.centerXAnchor)
         default:
-            northView.topAnchor.constraintEqualToAnchor(blueBackground.topAnchor, constant: 20)
-            northView.centerXAnchor.constraintEqualToAnchor(blueBackground.centerXAnchor)
+            northLayoutToMargin = northView.topAnchor.constraintEqualToAnchor(blueBackground.topAnchor, constant: 20)
+            northLayoutCenter = northView.centerXAnchor.constraintEqualToAnchor(blueBackground.centerXAnchor)
         }
+        
+        self.view.addConstraints([northLayoutToMargin, northLayoutCenter])
+        
         super.updateViewConstraints()
     }
+    
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.All
